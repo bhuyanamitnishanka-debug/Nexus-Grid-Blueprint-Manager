@@ -1,0 +1,8 @@
+{
+  "name": "Nexus-Grid Blueprint Manager",
+  "description": "An AI-driven lifecycle platform managing high-performance data center projects from initial concept sketches through final engineering delivery.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

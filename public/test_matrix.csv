@@ -1,0 +1,5 @@
+Test_Case_ID,Joint_Angle_Rad,Link_Offset_M,Link_Length_M,External_Force_Z_N,Expected_Base_Torque_Nm,Target_Safety_Gate,Notes
+TC-01-NOMINAL,0.000,0.45,0.00,120.0,45.00,VALID,Standard static calibration check
+TC-02-OVERLOAD,0.524,0.55,0.35,850.0,312.45,CRITICAL_SHEAR_FAILURE,Verifies exception trap limits
+TC-03-UNDERLOAD,0.785,0.00,0.35,15.0,11.20,VALID,Low-load friction threshold pass
+TC-04-BIO_DRIFT,0.261,0.45,0.55,200.0,88.10,BIO_STABILITY_FAILURE,Verifies cellular level cross-drops

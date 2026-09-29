@@ -1,0 +1,52 @@
+[
+    {
+        "active_layout_modifier": 1.0,
+        "subsystems": {
+            "coolant_level_liters": 500.0,
+            "circuit_line_voltage_v": 415.0
+        }
+    },
+    {
+        "timestamp": "2026-09-29 13:00:36",
+        "active_layout_modifier": 1.5,
+        "subsystems": {
+            "coolant_level_liters": 477.2,
+            "circuit_line_voltage_v": 432.6
+        },
+        "medical_regeneration": {
+            "regeneration_rate_pct": 97.95,
+            "cellular_density_index": 1.075,
+            "target_fluid_viscosity_cp": "4.5"
+        },
+        "exception_handler_status": {
+            "global_state": "STABLE_OPERATION",
+            "error_trap_logs": "All tracking matrices verified normal."
+        },
+        "telemetry": {
+            "MG-DRIVE-01": {
+                "node_id": "MG-DRIVE-01",
+                "calculated_shear_stress_mpa": 73.34,
+                "output_torque_nm": 225.0,
+                "safety_status": "VALID"
+            },
+            "MG-TRANS-02": {
+                "node_id": "MG-TRANS-02",
+                "calculated_shear_stress_mpa": 18.33,
+                "output_torque_nm": 450.0,
+                "safety_status": "VALID"
+            },
+            "MG-ROBO-03": {
+                "node_id": "MG-ROBO-03",
+                "calculated_shear_stress_mpa": 195.84,
+                "output_torque_nm": 157.5,
+                "safety_status": "VALID"
+            },
+            "STR-CAM-04": {
+                "node_id": "STR-CAM-04",
+                "calculated_shear_stress_mpa": 6.08,
+                "output_torque_nm": 409.5,
+                "safety_status": "VALID"
+            }
+        }
+    }
+]

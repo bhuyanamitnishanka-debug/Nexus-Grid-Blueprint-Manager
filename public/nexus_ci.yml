@@ -1,0 +1,33 @@
+name: Nexus-Grid Engine CI Pipeline
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+jobs:
+  build-and-validate:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Source Code Repository
+      uses: actions/checkout@v4
+
+    - name: Set up C++ Build Environment
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y build-essential
+    - name: Compile Kinematics Load Engine
+      run: |
+        make clean
+        make
+    - name: Execute Automated Test Matrix
+      run: |
+        ./nexus_dh_engine test_matrix.csv
+    - name: Archive Persistent Simulation Traces
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: simulation-audit-ledger
+        path: |
+          simulation_db.json
+          simulation_audit.csv
